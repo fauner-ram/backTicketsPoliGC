@@ -8,7 +8,7 @@
     "build": "tsc && node config-builds/copy-locals.js",
     "dev": "ts-node-dev src/app.ts"
   },
-  "author": "FAUNER",
+  "author": "Duvan Moncada",
   "license": "ISC",
   "dependencies": {
     "@azure/storage-blob": "^12.17.0",

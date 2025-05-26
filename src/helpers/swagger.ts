@@ -12,10 +12,9 @@ const swaggerOptions: Options = {
             {
                 url: 'http://localhost:8080/ticketback',
                 description: 'Local server',
-                // http://localhost:8080/api-docs/ticketback#/
             },
             {
-                url: 'https://ticketback.azurewebsites.net/ticketback',
+                url: 'https://backttticket-a3eeawgkhqhpafbm.eastus2-01.azurewebsites.net/ticketback',
                 description: 'Production server',
             },
         ],
@@ -34,7 +33,13 @@ const swaggerOptions: Options = {
             // }
         ],
     },
-    apis: ['./src/routes/*.ts', './src/controllers/*.ts'],
+    // apis: ['./src/routes/*.ts', './src/controllers/*.ts'],
+    apis: [
+        './src/routes/*.ts',
+        './src/controllers/*.ts',
+        './dist/routes/*.js',
+        './dist/controllers/*.js'
+    ],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);

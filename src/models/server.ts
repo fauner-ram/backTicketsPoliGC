@@ -81,6 +81,10 @@ class Server {
   }
 
   routes() {
+    // Ruta para la raíz
+    this.app.get('/', (req, res) => {
+      res.send('API funcionando');
+    });
     // example
     this.app.use(this.path.url, ticketDataRouter);
     
